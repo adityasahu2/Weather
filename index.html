@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="center" id="nav">
+            <div class="center" id="heading">
+                <img src="icons/logo.png" id="logo">
+                <h1>Weather</h1>
+            </div>
+            <div class="center" id="search">
+                <input type="text" id="search-bar" placeholder="Enter City">
+                <button type="submit" id="search-button"><img src="icons/search.svg" alt=""></button>
+            </div>
+            <div class="center" id="menu-bar">
+                <button type="menu" id="menu-button" class="center"><img src="icons/hamburger.svg" alt=""></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="grid-item-home center" id="home">Enter Your City</h1>
+        <div id="grid">
+            <div class="grid-item" id="section1">
+                <div class="grid-item-item" id="item1">
+                    <h1 class="font-size-2-5" id="city-name">Bhubaneswar</h1>
+                </div>
+                <div class="grid-item-item" id="item2">
+                    <div id="time-box">
+                        <h2 class="font-size-2 line-height-1-2" id="time">9:26 PM</h2>
+                        <h4 class="font-size-1-1" id="date">Fri, 2 August</h4>
+                        <h5 class="font-size-0-7">GMT <span id="timezone">+6:30</span></h5>
+                    </div>
+                </div>
+                <div class="grid-item-item" id="item3">
+                    <div id="temp-box">
+                        <div>
+                            <div id="temp-flex">
+                                <h1 class="font-size-7 line-height-1" id="temp">22</h1>
+                                <h1 id="deg"><span class="deg">°C</span></h1>
+                            </div>
+                            <h2 class="line-height-1-2" id="min-max-temp"><span id="min-temp">18</span><span
+                                    class="deg">°C</span> - <span id="max-temp">25</span><span class="deg">°C</span>
+                            </h2>
+                            <h3>Feels like <span id="feels-like">23</span><span class="deg">°C</span></h3>
+                            <h3 id="weather-description">Sunny</h3>
+                        </div>
+                        <div>
+                            <div id="flex">
+                                <h4>Sunrise</h4>
+                                <h3 id="sunrise">5:30 AM</h3>
+                            </div>
+                            <div id="flex">
+                                <h4>Sunset</h4>
+                                <h3 id="sunset">5:30 PM</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-item" id="item3">
+                    <img id="weather-icon" src="icons/night-clear.svg" alt="">
+                </div>
+            </div>
+            <div class="grid-item" id="section2">
+                <div class="section-flex">
+                    <div>
+                        <h2>Location</h2>
+                        <div class="margin-tb-10">
+                            <h4>Latitude <span id="latitude">28.6667</span></h4>
+                            <h4>Longitude <span id="longitude">77.2167</span></h4>
+                        </div>
+                    </div>
+                    <div><img src="icons/location.svg" class="section-icon" alt=""></div>
+                </div>
+                <iframe id="map" src="https://maps.google.com/maps?q=Delhi&hl=en&z=14&amp;output=embed"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="grid-item" id="section3">
+                <div class="section-flex">
+                    <div>
+                        <h2>Pressure</h2>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="pressure">999</h1>
+                            <h2>hPa</h2>
+                        </div>
+                        <div>
+                            <h4>Ground level</h4>
+                            <h3><span id="grnd-pressure">999</span> hPa</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <img id="pressure-icon" src="icons/pressure.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="section4">
+                <div class="section-flex">
+                    <div>
+                        <h2>Wind Speed</h2>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="wind-speed">3.7</h1>
+                            <h2>km/hr</h2>
+                        </div>
+                        <div class="section-flex">
+                            <h3 id="direction">North</h3>
+                            <img src="icons/wind-deg.svg" alt="" id="direction-icon">
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/wind-speed.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="section5">
+                <div class="section-flex">
+                    <div>
+                        <h2>Humidity</h2>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="humidity">60</h1>
+                            <h2>%</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/humidity.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="section6">
+                <div class="section-flex">
+                    <div>
+                        <h2>Visibility</h2>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="visibility">4.5</h1>
+                            <h2>km</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/visibility.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="section7">
+                <div class="section-flex">
+                    <div>
+                        <h2>Clouds</h2>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="clouds">75</h1>
+                            <h2>%</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/cloud.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="section8">
+                <div class="section-flex">
+                    <div>
+                        <div class="section-item-flex" id="exception">
+                            <h2>Rain</h2>
+                            <h4>(<span id="rain-time">1 hr</span>)</h4>
+                        </div>
+                        <div class="section-item-flex">
+                            <h1 class="font-size-3" id="rain">0.36</h1>
+                            <h2>mm</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/rain.svg" alt="" class="section-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
