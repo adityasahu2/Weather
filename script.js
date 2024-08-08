@@ -87,6 +87,9 @@ function getTime(time, timeZone) {
         realTimeArr[2] = realTimeArr[2] - 60
         realTimeArr[0] = realTimeArr[0] + 1
     }
+    if (realTimeArr[2] < 10){
+        realTimeArr[2] = "0" + realTimeArr[2]
+    }
     let div = Math.floor(realTimeArr[0] / 12)
     realTimeArr[0] = realTimeArr[0] % 12
     realTimeArr[3] = (div % 2 == 0) ? " AM" : " PM"
@@ -95,8 +98,13 @@ function getTime(time, timeZone) {
 
 function getTimeZone(timezone) {
     timezone = (timezone / 3600).toFixed(2).toString().split(".")
-    if (timezone[0].charAt(0) == "-") return timezone[0] + ":" + (60 * timezone[1] / 100)
-    else return "+" + timezone[0] + ":" + (60 * timezone[1] / 100)
+    let min
+    if((60 * timezone[1] / 100) < 10){
+        min = "0" + (60 * timezone[1] / 100)
+    }
+    else min = (60 * timezone[1] / 100)
+    if (timezone[0].charAt(0) == "-") return timezone[0] + ":" + min
+    else return "+" + timezone[0] + ":" + min
 }
 
 async function getWeather() {
