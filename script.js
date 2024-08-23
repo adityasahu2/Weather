@@ -168,8 +168,8 @@ function searchweather() {
                 rain.textContent = "N/A"
             } else {
                 for (const key in data.rain) {
-                    raintime = key.slice(0, 1) + " " + key.slice(1)
-                    rain = data.rain[key]
+                    raintime.textContent = key.slice(0, 1) + " " + key.slice(1)
+                    rain.textContent = data.rain[key]
                 }
             }
             show()
